@@ -1,0 +1,30 @@
+The blog plugin is an example of user in and output
+handling with OPF.
+
+it features a simple administration backend, that lets
+you author new articles, an image upload, a simple
+rich text editor (featuring nicEdit), a simple list
+view and a simple detail view.
+
+I have added a demo user:
+Username: test
+Password: test
+
+if youd like to add a new user, you can simply do that
+via your phpmyadmin or db shell like this:
+
+INSERT INTO users SET (username,password,email) 
+ VALUES('your_user',md5('your_password'),'your_email');
+
+To install the plugin:
+1. unpack/move it to the plugins directory within your
+OPF directory.
+2. create an empty database, you can change the database
+default name by editing blog/hooks/01_params.php and
+change $config["db_name"] to fit your needs.
+3. import the file "blog.sql" into that database.
+4. edit conf/config.php in your OPF root and add
+the blog plugin to your plugins.
+
+enjoy my little example;-)
+Oliver

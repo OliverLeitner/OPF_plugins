@@ -1,0 +1,36 @@
+<div id="header"><h1>Add a new Blogpost</h1></div>
+<div id="adminpage">
+	<div id="home"><a href="?page=blog_home">Back to my blog</a></div>
+	<!--div id="entries">
+		<h2>Blog Entries:</h2>
+		<ul>
+			###BLOGPOSTS###
+		</ul>
+	</div-->
+	<div id="blogpost">
+		<script type="text/javascript" src="plugins/blog/js/nicEdit-latest.js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+				bkLib.onDomLoaded(function() {
+					nicEditors.allTextAreas()
+				});
+			//]]>
+		</script>
+		<form name="blogpost" action="index.php?page=blog_admin&action=post" enctype="multipart/form-data" method=POST>
+			<input type="hidden" name="userid" value="###USERID###" />
+			<label for="file">Blogpost Image:</label><br />
+			<input type="file" name="blog_image" size="40" /><br />
+			<label for="blogtitle">Title of your blogpost:</label><br />
+			<input type="text" name="blogtitle" value="" size="80" /><br />
+			<!--label for="categories">Choose a post category:</label><br />
+			<select name="categories">
+				<option value="1">personal</option>
+				<option value="2">coding</option>
+				<option value="3">anime</option>
+			</select><br /-->
+			<label for="blogtext">Your blog entry:</label><br />	
+			<textarea rows="30" cols="100" name="blogtext"></textarea><br />
+			<input type="submit" name="post" value="post" /> 
+		</form>
+	</div>
+</div>
