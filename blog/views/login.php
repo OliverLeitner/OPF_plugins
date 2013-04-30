@@ -22,10 +22,10 @@ if($_SESSION["user"] != ""){
 $templates = $dynamic->loadTemplates($plugin_name["blog"]);
 
 $output = array();
-$output["page"] = $parser->fillMainTemplate($output,NULL,$templates["login"]);
+$output["page"] = $parser->fillMainTemplate($output,$templates["login"]);
 
 //and parse the output to the template
-$main = $parser->fillMainTemplate($output,NULL,$templates["blog_body"]);
+$main = $parser->fillMainTemplate($output,$templates["blog_body"]);
 
 //and we put the output out...
 $page = array();

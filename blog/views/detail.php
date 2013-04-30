@@ -12,12 +12,12 @@ $blog = array();
 $blog["blogimage"] = $img_path.$entry[4];
 $blog["blogname"] = $entry[3];
 $blog["blogtext"] = $entry[5];
-$detail = $parser->fillMainTemplate($blog,NULL,$templates["blog_detail"]);
+$detail = $parser->fillMainTemplate($blog,$templates["blog_detail"]);
 
 //detail template into main template
 $output = array();
 $output["page"] = $detail;
-$main = $parser->fillMainTemplate($output,NULL,$templates["blog_body"]);
+$main = $parser->fillMainTemplate($output,$templates["blog_body"]);
 
 $page = array();
 $page["blog_detail"] = $parser->cleanup($main);

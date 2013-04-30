@@ -36,16 +36,16 @@ $out_posts = "";
 foreach($entries AS $key => $value){
 	$out["post_id"] = $value[0];
 	$out["post_title"] = $value[3];
-	$out_posts .= $parser->fillMainTemplate($out,NULL,$templates["admin_post"]);
+	$out_posts .= $parser->fillMainTemplate($out,$templates["admin_post"]);
 }
 
 //give our template array the data we just selected
 $output = array();
 $output["userid"] = $userid;
 $output["blogposts"] = $out_posts;
-$output["page"] = $parser->fillMainTemplate($output,NULL,$templates["admin"]);
+$output["page"] = $parser->fillMainTemplate($output,$templates["admin"]);
 //and parse the output to the template
-$main = $parser->fillMainTemplate($output,NULL,$templates["blog_body"]);
+$main = $parser->fillMainTemplate($output,$templates["blog_body"]);
 
 //and we put the output out...
 $page = array();

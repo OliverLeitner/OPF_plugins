@@ -14,14 +14,14 @@ foreach($entries AS $key => $value){
 	$out_entries["blog_title"] = $value[3];
 	$out_entries["blog_summary"] = shortText($value[5]);
 	$out_entries["blog_id"] = $value[0];
-	$out_posts .= $parser->fillMainTemplate($out_entries,NULL,$templates["blog_entry"]);
+	$out_posts .= $parser->fillMainTemplate($out_entries,$templates["blog_entry"]);
 }
 
 $output = array();
 $output["blog_entries"] = $out_posts;
 //and parse the output to the template
-$output["page"] = $parser->fillMainTemplate($output,NULL,$templates["blog_home"]);
-$main = $parser->fillMainTemplate($output,NULL,$templates["blog_body"]);
+$output["page"] = $parser->fillMainTemplate($output,$templates["blog_home"]);
+$main = $parser->fillMainTemplate($output,$templates["blog_body"]);
 
 //and we put the output out...
 $page = array();

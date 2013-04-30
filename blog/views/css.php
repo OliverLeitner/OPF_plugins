@@ -16,7 +16,7 @@ gmdate("D, d M Y H:i:s",
 time() + $offset) . " GMT";
 header($ExpStr);
         
-$main = $parser->fillMainTemplate($data,NULL,$templates["css"]);
+$main = $parser->fillMainTemplate($data,$templates["css"]);
 $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $main);
 $buffer = str_replace(': ', ':', $buffer);
 $buffer = str_replace(array("\r\n", "\r", "\n","\t"), '', $buffer);
