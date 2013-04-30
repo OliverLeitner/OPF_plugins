@@ -6,7 +6,7 @@ $out_includes = $dynamic->loadHooks("blog");
 foreach($out_includes AS $key => $value){ require_once($value); }
 
 //loading our plugins templates...
-$templates = $dynamic->loadTemplates($plugin_name["blog"],$data_con);
+$templates = $dynamic->loadTemplates($plugin_name["blog"]);
 
 $entries = getAll($db_core);
 $out_posts = "";

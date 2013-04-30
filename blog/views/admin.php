@@ -25,7 +25,7 @@ if($_POST){
 }
 
 //loading our plugins templates...
-$templates = $dynamic->loadTemplates($plugin_name["blog"],$data_con);
+$templates = $dynamic->loadTemplates($plugin_name["blog"]);
 
 //getting userid for editing and fetching purposes...
 $userid = getUserid($_SESSION["user"],$db_core);

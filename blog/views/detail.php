@@ -6,7 +6,7 @@ $out_includes = $dynamic->loadHooks("blog");
 foreach($out_includes AS $key => $value){ require_once($value); }
 
 //detail data into detail template
-$templates = $dynamic->loadTemplates($plugin_name["blog"],$data_con);
+$templates = $dynamic->loadTemplates($plugin_name["blog"]);
 $entry = getEntry($_GET["blogid"],$db_core);
 $blog = array();
 $blog["blogimage"] = $img_path.$entry[4];

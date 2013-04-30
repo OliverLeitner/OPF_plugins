@@ -37,6 +37,5 @@ $config["db_name"] = "blog";
 
 //and we build a connection
 //we make sure that we connect to our database...
-//$db_con = new OPF\Database\DB($config);
 $db_core = new OPF\Database\DB_CORE($config);
 ?>

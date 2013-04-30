@@ -3,7 +3,7 @@
  * stylesheet file
  */
 //loading our plugins templates...
-$templates = $dynamic->loadTemplates($plugin_name["blog"],$data_con);
+$templates = $dynamic->loadTemplates($plugin_name["blog"]);
 
 $data = array();
 $data["dummy"] = "hello world";

@@ -19,7 +19,7 @@ if($_SESSION["user"] != ""){
 }
 
 //loading our plugins templates...
-$templates = $dynamic->loadTemplates($plugin_name["blog"],$data_con);
+$templates = $dynamic->loadTemplates($plugin_name["blog"]);
 
 $output = array();
 $output["page"] = $parser->fillMainTemplate($output,NULL,$templates["login"]);
